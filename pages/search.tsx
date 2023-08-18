@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 
-//@ts-ignore
 const SearchPage = () => {
 
     const router = useRouter();
@@ -15,7 +14,6 @@ const SearchPage = () => {
 
     const [cursorPosition, setCursorPosition] = useState({ x: Math.random() * 1000, y: Math.random() * 1000 });
     const [inputPosition, setInputPosition] = useState({ x: 0, y: 0 });
-    const [searchBtnPosition, setSearchBtnPosition] = useState({ x: 0, y: 0 });
 
     const inputRef = useRef<any>(null)
     const searchBtnRef = useRef<any>(null)
@@ -62,22 +60,22 @@ const SearchPage = () => {
         }, 2500)
     }, []);
 
-    useEffect(()=>{
-        if (typingStatus === "finished"){
-            if (searchBtnRef.current) {
-                const targetRect = searchBtnRef.current.getBoundingClientRect();
-                setCursorPosition({
-                    x: targetRect.left + targetRect.width / 2 + 15,
-                    y: targetRect.top + 30,
-                });
+    // useEffect(()=>{
+    //     if (typingStatus === "finished"){
+    //         if (searchBtnRef.current) {
+    //             const targetRect = searchBtnRef.current.getBoundingClientRect();
+    //             setCursorPosition({
+    //                 x: targetRect.left + targetRect.width / 2 + 15,
+    //                 y: targetRect.top + 30,
+    //             });
 
-                setTimeout(()=>{
-                    //@ts-ignore
-                    window.location = `https://www.google.com/search?q=${q}`
-                },2500)
-            }
-        }
-    },[typingStatus])
+    //             setTimeout(()=>{
+    //                 //@ts-ignore
+    //                 window.location = `https://www.google.com/search?q=${q}`
+    //             },2500)
+    //         }
+    //     }
+    // },[typingStatus])
 
     return (
         <div className="w-full min-h-screen bg-gray-700 p-[16px]">
