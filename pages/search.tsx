@@ -60,22 +60,22 @@ const SearchPage = () => {
         }, 2500)
     }, []);
 
-    // useEffect(()=>{
-    //     if (typingStatus === "finished"){
-    //         if (searchBtnRef.current) {
-    //             const targetRect = searchBtnRef.current.getBoundingClientRect();
-    //             setCursorPosition({
-    //                 x: targetRect.left + targetRect.width / 2 + 15,
-    //                 y: targetRect.top + 30,
-    //             });
+    useEffect(()=>{
+        if (typingStatus === "finished"){
+            if (searchBtnRef.current) {
+                const targetRect = searchBtnRef.current.getBoundingClientRect();
+                setCursorPosition({
+                    x: targetRect.left + targetRect.width / 2 + 15,
+                    y: targetRect.top + 30,
+                });
 
-    //             setTimeout(()=>{
-    //                 //@ts-ignore
-    //                 window.location = `https://www.google.com/search?q=${q}`
-    //             },2500)
-    //         }
-    //     }
-    // },[typingStatus])
+                setTimeout(()=>{
+                    //@ts-ignore
+                    window.location = `https://www.google.com/search?q=${q}`
+                },2500)
+            }
+        }
+    },[typingStatus])
 
     return (
         <div className="w-full min-h-screen bg-gray-700 p-[16px]">
@@ -101,7 +101,7 @@ const SearchPage = () => {
                     </div>
 
                     <div className=" mt-[20px] flex items-center justify-center gap-[32px]">
-                        <div className="px-[24px] py-[12px] bg-gray-800 text-white rounded-[4px]">I'm Feeling Lucky</div>
+                        <div className="px-[24px] py-[12px] bg-gray-800 text-white rounded-[4px]">Im Feeling Lucky</div>
                         <div ref={searchBtnRef} className="px-[24px] py-[12px] bg-gray-800 text-white rounded-[4px]">Google Search</div>
                     </div>
 
