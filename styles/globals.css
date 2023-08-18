@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+*{
+  font-family: 'Vazirmatn';
+}
+
 @keyframes carrot {
   0%{
     opacity: 0;
