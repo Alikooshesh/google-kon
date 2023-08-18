@@ -83,7 +83,7 @@ const SearchPage = () => {
 
             <svg className="w-5 h-5" style={{ position: 'absolute', top: cursorPosition.y, left: cursorPosition.x, pointerEvents: 'none', zIndex: 9999, transition: 'all 2s' }} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="1064.7701 445.5539 419.8101 717.0565" enable-background="new 1064.7701 445.5539 419.8101 717.0565">
-                <polygon fill="#231F20" points="1283.1857,1127.3097 1406.1421,1077.6322 1314.2406,850.1678 1463.913,852.7823 1093.4828,480.8547 
+                <polygon fill="#FFFFFF" points="1283.1857,1127.3097 1406.1421,1077.6322 1314.2406,850.1678 1463.913,852.7823 1093.4828,480.8547 
 	1085.4374,1005.6964 1191.2842,899.8454 "/>
             </svg>
 
