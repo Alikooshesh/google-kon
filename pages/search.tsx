@@ -66,7 +66,7 @@ const SearchPage = () => {
                 const targetRect = searchBtnRef.current.getBoundingClientRect();
                 setCursorPosition({
                     x: targetRect.left + targetRect.width / 2 + 15,
-                    y: targetRect.top + 30,
+                    y: targetRect.top + targetRect.height / 2 - 5,
                 });
 
                 setTimeout(()=>{
